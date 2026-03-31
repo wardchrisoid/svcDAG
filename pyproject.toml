@@ -6,13 +6,33 @@ build-backend = "setuptools.build_meta"
 name = "svcdag"
 version = "0.1.0"
 description = "Deterministic startup and shutdown of dependent services via a DAG"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Christopher Ward", email = "wardchrisoid@gmail.com" }
+]
 requires-python = ">=3.11"
 dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Systems Administration",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/wardchrisoid/svcdag"
+Repository = "https://github.com/wardchrisoid/svcdag"
+Issues = "https://github.com/wardchrisoid/svcdag/issues"
 
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
-    "pytest-timeout>=2.3",
 ]
 
 [tool.setuptools.packages.find]
