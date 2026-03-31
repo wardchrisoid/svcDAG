@@ -1,0 +1,23 @@
+{
+  "services": {
+    "database": {
+      "command": ["./bin/database", "--port", "5432"],
+      "dependencies": [],
+      "startup_timeout": 5.0,
+      "shutdown_timeout": 5.0
+    },
+    "cache": {
+      "command": ["./bin/cache"],
+      "dependencies": [],
+      "startup_timeout": 3.0
+    },
+    "api_server": {
+      "command": ["./bin/api"],
+      "dependencies": ["database", "cache"]
+    },
+    "worker": {
+      "command": ["./bin/worker"],
+      "dependencies": ["api_server"]
+    }
+  }
+}

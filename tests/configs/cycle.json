@@ -1,0 +1,16 @@
+{
+  "services": {
+    "service_a": {
+      "command": ["./bin/a"],
+      "dependencies": ["service_c"]
+    },
+    "service_b": {
+      "command": ["./bin/b"],
+      "dependencies": ["service_a"]
+    },
+    "service_c": {
+      "command": ["./bin/c"],
+      "dependencies": ["service_b"]
+    }
+  }
+}

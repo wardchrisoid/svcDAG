@@ -1,0 +1,20 @@
+{
+  "services": {
+    "database": {
+      "command": ["./bin/database"],
+      "dependencies": []
+    },
+    "auth_service": {
+      "command": ["./bin/auth"],
+      "dependencies": ["database"]
+    },
+    "user_service": {
+      "command": ["./bin/users"],
+      "dependencies": ["database"]
+    },
+    "api_gateway": {
+      "command": ["./bin/gateway"],
+      "dependencies": ["auth_service", "user_service"]
+    }
+  }
+}

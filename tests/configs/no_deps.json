@@ -1,0 +1,16 @@
+{
+  "services": {
+    "metrics": {
+      "command": ["./bin/metrics"],
+      "dependencies": []
+    },
+    "logger": {
+      "command": ["./bin/logger"],
+      "dependencies": []
+    },
+    "notifier": {
+      "command": ["./bin/notifier"],
+      "dependencies": []
+    }
+  }
+}
